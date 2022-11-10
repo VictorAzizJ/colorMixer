@@ -28,8 +28,9 @@
               <span><%= mix[i].colorOne %></span>
               
               <input type="color" value="" name="colorTwo">
-              <button class="blending" onclick="blend()">Blend Color</button>
-              <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+              <button class="blending" >Blend Color</button>
+              <button class="dump" >Throw Out Mix</button>
+              <div style='background-color:"<%= mix[i].colorOne %>"'> </div>
             </li> <!-- make thumbs down functional and track pathing-->
           <% } %>
           </ul>

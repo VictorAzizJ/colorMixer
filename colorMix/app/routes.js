@@ -27,7 +27,7 @@ module.exports = function(app, passport, db) {
 // message board routes ===============================================================
 
     app.post('/mix', (req, res) => {
-      db.collection('mix').save({colorOne: req.body.colorOne , colorTwo: req.body.colorTwo ,  }, (err, result) => {
+      db.collection('mix').save({colorOne: req.body.colorOne , colorTwo: req.body.colorTwo , Blended: req.body.solution  }, (err, result) => {
         if (err) return console.log(err)
         console.log('saved to database')
         res.redirect('/profile')
@@ -36,10 +36,10 @@ module.exports = function(app, passport, db) {
 
     app.put('/mix', (req, res) => {
       db.collection('mix')
-      .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
+      .findOneAndUpdate({colorOne: req.body.colorOne}, {
         $set: {
-          thumbUp: req.body.thumbUp ? 1:0 ,
-          thumbDown: req.body.thumbUp ? 0:1
+          colorTwo : req.body.colorTwo,
+          Blended : req.body.Blended
         }
       }, {
         sort: {_id: -1},

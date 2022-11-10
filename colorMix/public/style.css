@@ -9,3 +9,8 @@ img{
 .hidden{
   visibility: hidden;
 }
+li > div{
+height: 100px;
+width: 100%;
+
+}
