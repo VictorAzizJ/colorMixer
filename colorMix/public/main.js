@@ -21,6 +21,7 @@ Array.from(blend).forEach(function(element) {
       (1 - 0.5) * blendable[1] + 0.5 * blendable2[1], 
       (1 - 0.5) * blendable[2] + 0.5 * blendable2[2]
   ];
+  //divide by 2 using '//' instead of  int_to_hex (Mr.Mike K)
         function int_to_hex(num)
           {
               var hex = Math.round(num).toString(16);

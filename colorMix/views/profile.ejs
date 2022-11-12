@@ -1,16 +1,16 @@
 <!doctype html>
 <html>
 <head>
-    <title>21 Savage Fan Site</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <title>Vic'S Color Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-color: rgb(233, 212, 186)">
 <div class="container">
 
-    <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+    <div class="page-header text-center header">
+        <h1><span class="fas fa-palette"></span>Profile Page</h1>
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
     </div>
 
@@ -25,12 +25,12 @@
           <ul class="messages">
           <% for(var i=0; i<mix.length; i++) {%>
             <li class="message">
-              <span><%= mix[i].colorOne %></span>
+              <span class="card-header"><%= mix[i].colorOne %></span>
               
               <input type="color" value="" name="colorTwo">
               <button class="blending" >Blend Color</button>
               <button class="dump" >Throw Out Mix</button>
-              <div style='background-color:"<%= mix[i].colorOne %>"'> </div>
+              <div class="card-body" style="background: <%= mix[i].Blended %>"> </div>
             </li> <!-- make thumbs down functional and track pathing-->
           <% } %>
           </ul>
@@ -39,7 +39,15 @@
 
 
 
-
+          <div class="card text-center">
+            <div class="card-header">Featured</div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Button</a>
+            </div>
+            <div class="card-footer text-muted">2 days ago</div>
+          </div>
 
 
 
