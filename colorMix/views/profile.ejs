@@ -30,7 +30,9 @@
               <input type="color" value="" name="colorTwo">
               <button class="blending" >Blend Color</button>
               <button class="dump" >Throw Out Mix</button>
-              <div class="card-body" style="background: <%= mix[i].Blended %>"> </div>
+              <div class="card-body" style="background: <%= mix[i].colorOne %>"><%= mix[i].colorOne %></div>
+              <div class="card-body" style="background: <%= mix[i].Blended %>"><%= mix[i].Blended %> </div>
+              <div class="card-body" style="background: <%= mix[i].colorTwo %>"><%= mix[i].colorTwo %> </div>
             </li> <!-- make thumbs down functional and track pathing-->
           <% } %>
           </ul>
